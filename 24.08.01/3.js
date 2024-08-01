@@ -24,6 +24,4 @@ const obj2 = {
 obj2.method();
 
 //첫번째 this는 메소드의 일반함수에서의 this이므로, obj2를 this로 바인딩하지만
-//두번째 this는 메소드의 일반함수에서 선언한 화살표함수 내부의 setTimeout의 콜백함수에서의 this입니다.
-// 일반적으로 setTimeout에서의 this는 전역객체를 가리키지만, setTimeout의 콜백함수에서의 this는 setTimeout을 바인딩합니다.
-// 따라서 timeout을 출력합니다.
+//두번째 브라우저에서 setTimeout안에서의 this는 어떻게 호출하더라도, window객체를 가리킨다.
